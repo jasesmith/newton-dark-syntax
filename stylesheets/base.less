@@ -14,7 +14,7 @@
   }
 
   .indent-guide {
-    color: @syntax-indent-guide-color;
+    color: darken(@syntax-indent-guide-color, 5%);
   }
 
   .invisible-character {
@@ -66,7 +66,7 @@
 }
 
 .comment {
-  color: @gray;
+  color: lighten(@gray, 7%);
 }
 
 .text.html {
@@ -189,7 +189,7 @@
 .punctuation {
   &.definition {
     &.comment {
-      color: @gray;
+      color: lighten(@gray, 7%);
     }
     &.string,
     &.variable,
