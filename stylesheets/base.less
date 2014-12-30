@@ -69,6 +69,10 @@
   color: @gray;
 }
 
+.text.html {
+    color: mix(@syntax-text-color, @gray);
+}
+
 .entity {
   &.name.type {
     color: @light-orange;
@@ -112,7 +116,18 @@
   }
 
   &.numeric {
-    color: @orange;
+    color: @red;
+  }
+  &.boolean {
+      &.true {
+        color: mix(@purple, @blue);
+      }
+      &.false {
+          color: mix(@purple, @red);
+      }
+  }
+  &.null {
+    color: mix(@blue, @dark-gray);
   }
 
   &.other.color {
@@ -132,7 +147,7 @@
   }
 
   &.parameter.function {
-    color: @syntax-text-color;
+    color: @light-orange;
   }
 }
 
@@ -143,7 +158,20 @@
 
 .string {
   color: @green;
-
+  &.html {
+      color: @blue;
+  }
+  &.js {
+    color: mix(@light-orange, @yellow);
+  }
+  &.quoted.double .begin,
+  &.quoted.double .end {
+    color: mix(@red, @orange);
+  }
+  &.quoted.single .begin,
+  &.quoted.single .end {
+      color: mix(@yellow, @green);
+  }
 
   &.regexp {
     color: @cyan;
@@ -161,9 +189,8 @@
 .punctuation {
   &.definition {
     &.comment {
-      color: @light-gray;
+      color: @gray;
     }
-
     &.string,
     &.variable,
     &.parameters,
@@ -221,19 +248,27 @@
   }
 
   &.name.tag {
-    color: @red;
-    text-decoration: underline;
+    color: @purple;
+    text-decoration: none;
+    &.inline {
+      color: mix(@orange, @red);
+    }
   }
 
   &.other.attribute-name {
     color: @green;
 
+    &.css {
+        color: @green;
+    }
+
     &.id {
-      color: @cyan;
+      color: @red;
     }
   }
 }
-.property-name.css {
+.property-name.css,
+.property-name.scss {
     color: @blue;
 }
 
@@ -245,7 +280,9 @@
   &.link {
     color: @orange;
   }
-
+  &.tag {
+    color: mix(@purple, @gray);
+  }
   &.require {
     color: @blue;
   }
