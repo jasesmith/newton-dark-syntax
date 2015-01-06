@@ -1,4 +1,4 @@
-# newton-dark-syntax theme
+# Newton Dark Syntax _Theme_
 
 Syntax colors to go along with the Newton Dark UI theme.
 
