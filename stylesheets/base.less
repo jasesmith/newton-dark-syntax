@@ -56,6 +56,11 @@
     background: fade(@syntax-selection-color, 35%) !important;
     border-bottom: 1px solid @syntax-gutter-text-color-selected;
   }
+  .bracket-matcher.region {
+      background: fade(@blue, 40%);
+      border-radius: .1rem;
+      box-shadow: 0 0 0 .2rem fade(@blue, 50%);
+  }
 }
 
 :host .search-results .marker .region {
