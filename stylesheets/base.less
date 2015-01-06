@@ -1,11 +1,6 @@
 @import "syntax-variables";
 
-.editor-colors {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
-}
-
-.editor {
+:host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -29,6 +24,7 @@
       &.cursor-line {
         background-color: @syntax-gutter-background-color-selected;
         color: @syntax-gutter-text-color-selected;
+        border-bottom: 1px solid;
       }
 
       &.cursor-line-no-selection {
@@ -54,19 +50,25 @@
   .selection .region {
     background-color: @syntax-selection-color;
   }
+  // The cursor line important to use rgba for opacity, also requires !important
+  // to override any theme.
+  .line.highlight-line {
+    background: fade(@syntax-selection-color, 35%) !important;
+    border-bottom: 1px solid @syntax-gutter-text-color-selected;
+  }
 }
 
-.editor .search-results .marker .region {
+:host .search-results .marker .region {
   background-color: transparent;
   border: 1px solid @syntax-result-marker-color;
 }
 
-.editor .search-results .marker.current-result .region {
+:host .search-results .marker.current-result .region {
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
 .comment {
-  color: lighten(@gray, 7%);
+  color: lighten(@gray, 10%);
 }
 
 .text.html {
@@ -348,6 +350,6 @@
   }
 }
 
-.editor.mini .scroll-view {
+:host(.mini) .scroll-view {
   padding-left: 1px;
 }
