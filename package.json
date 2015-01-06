@@ -1,7 +1,7 @@
 {
   "name": "newton-dark-syntax",
   "theme": "syntax",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Syntax theme to go along with the Newton-Dark-UI theme.",
   "repository": "https://github.com/jasesmith/newton-dark-syntax",
   "license": "MIT",
