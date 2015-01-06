@@ -30,6 +30,9 @@
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
       }
+      &.linter-warning .icon-right:before {
+          color: mix(#FFF, @red);
+      }
     }
   }
 
@@ -60,6 +63,12 @@
       background: fade(@blue, 40%);
       border-radius: .1rem;
       box-shadow: 0 0 0 .2rem fade(@blue, 50%);
+  }
+  .highlight.linter-warning .region {
+      -webkit-mask-image: none;
+      background: fade(@red, 30%);
+      box-shadow: 0 -.2rem 0 0 @red, 0 .2rem 0 0 @red;
+      border-radius: .1rem;
   }
 }
 
