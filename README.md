@@ -7,3 +7,10 @@ Syntax colors to go along with the Newton Dark UI theme.
 Use the Newton Dark UI theme for more newtonian goodness.
 
 ![Newton Dark UI](http://jasesmith.github.io/newton-dark-ui/newton-dark-ui.png)
+
+---
+
+### Recommended Packages
+* [Highlight Line](https://atom.io/packages/highlight-line)
+* [Atom Color Highlight](https://atom.io/packages/atom-color-highlight)
+* [File Icons](https://atom.io/packages/file-icons)
