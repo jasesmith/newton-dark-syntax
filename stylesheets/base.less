@@ -33,13 +33,16 @@
       &.linter-warning .icon-right:before {
           color: mix(#FFF, @red);
       }
+      &.folded {
+        background: @red;
+      }
     }
   }
 
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    color: @syntax-cursor-color;
   }
 
   .invisible {
