@@ -41,7 +41,7 @@ atom-text-editor {
 
   .gutter .line-number.folded,
   .gutter .line-number:after,
-  .fold-marker:after {
+  .fold-marker::after {
     color: @syntax-cursor-color;
   }
 
@@ -79,12 +79,12 @@ atom-text-editor {
     border-bottom: 2px dotted @cyan;
 }
 
-atom-text-editor .search-results .marker .region {
+atom-text-editor .search-results .syntax--marker .region {
   background-color: transparent;
   border: 1px solid @syntax-result-marker-color;
 }
 
-atom-text-editor .search-results .marker.current-result .region {
+atom-text-editor .search-results .syntax--marker.current-result .region {
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
