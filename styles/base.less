@@ -1,5 +1,26 @@
 @import "syntax-variables";
 
+atom-pane-container {
+    atom-pane-axis > atom-pane-resize-handle {
+        background: @cyan;
+        padding: 1px;
+    }
+    atom-pane {
+        .tab-bar:empty {
+            display: none;
+        }
+        .tab-bar:empty + .item-views::before {
+            display: none;
+        }
+        .tab-bar:empty + .item-views::after {
+            display: none;
+        }
+    }
+    &.left ul.tab-bar {
+        display: none;
+    }
+}
+
 atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
